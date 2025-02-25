@@ -25,12 +25,23 @@
             --glass: rgba(255, 255, 255, 0.05);
         }
         
-        .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.9), url('1.png') center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-        }
+       .hero {
+        background: linear-gradient(135deg, rgba(245,245,245,0.95) 0%, rgba(255,255,255,0.98) 100%), url('1.png') center/cover;
+        height: 100vh;
+        position: relative;
+    }
+
+    .hero-content {
+        color: #2d2d2d;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .section-title {
+        color: #6366f1;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 1.5rem;
+    }
         
         .feature-card {
             background: var(--glass);
@@ -86,10 +97,7 @@
             100% { transform: translateX(150%) rotate(45deg); }
         }
         
-        .section-title {
-            position: relative;
-            padding-bottom: 1rem;
-        }
+    
         
         .section-title::after {
             content: '';
@@ -126,13 +134,28 @@
 </nav>
 
 <!-- Hero Section -->
-<section class="hero-section">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8 text-center text-lg-start">
-                <h1 class="display-1 fw-bold mb-4 gradient-text">Your Ultimate Streaming Experience</h1>
-                <p class="lead mb-5">4K Quality • 86 Language Subtitles • 40,000+ Titles</p>
-                <a href="#download" class="btn btn-cta btn-lg rounded-pill">Start 90-Day Free Trial</a>
+<section class="hero d-flex align-items-center">
+    <div class="container position-relative z-index-1 text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 hero-content">
+                <h6 class="section-title">NETSTREAM PARTNERSHIP</h6>
+                <h1 class="display-3 fw-bold mb-4 text-dark">Unlimited Entertainment</h1>
+                <p class="lead mb-5 text-secondary" style="font-size:1.25rem">
+                    Stream 40,000+ Movies & TV Shows in Crystal-Clear 4K
+                </p>
+                <a href="#download" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow-lg">
+                    Start Free Trial <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+                
+                <!-- Quality Badges -->
+                <div class="mt-5 d-flex gap-3 justify-content-center">
+                    <div class="badge bg-light text-dark p-3">
+                        <i class="fas fa-hd me-2"></i>4K Ultra HD
+                    </div>
+                    <div class="badge bg-light text-dark p-3">
+                        <i class="fas fa-closed-captioning me-2"></i>86 Languages
+                    </div>
+                </div>
             </div>
         </div>
     </div>
