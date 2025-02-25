@@ -1,112 +1,175 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetStream - Premium Movie & TV Show Streaming Platform</title>
+    <meta name="description" content="Watch 40,000+ movies & TV shows with NetStream. 4K streaming, 86 language subtitles, exclusive content. Start your free trial today!">
     
-    <!-- SEO Meta Tags -->
-    <title>NetStream - Ultimate Streaming Platform for Movies & TV Shows</title>
-    <meta name="description" content="NetStream: Your all-in-one streaming platform with 40,000+ movies, TV shows, and multi-language support. Watch with subtitles in 86 languages. Affordable subscription plans starting at $4.99.">
-    <meta name="keywords" content="streaming movies, watch TV shows online, movie platform, affordable streaming, multi-language subtitles">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://xdreamms.github.io/NetStream/">
-    <meta property="og:title" content="NetStream - Ultimate Streaming Platform">
-    <meta property="og:description" content="Stream 40,000+ movies & TV shows with subtitles in 86 languages. Start your free trial today!">
+    <!-- Open Graph / Social Meta -->
     <meta property="og:image" content="https://xdreamms.github.io/NetStream/1.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://xdreamms.github.io/NetStream/">
-    <meta property="twitter:title" content="NetStream - Ultimate Streaming Platform">
-    <meta property="twitter:description" content="Stream 40,000+ movies & TV shows with subtitles in 86 languages. Start your free trial today!">
-    <meta property="twitter:image" content="https://xdreamms.github.io/NetStream/1.png">
-
-    <!-- Bootstrap CSS -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://netstream.com">
+    
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Custom CSS -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('1.png');
-            background-size: cover;
-            height: 90vh;
+        :root {
+            --gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
         }
-        .feature-icon {
-            width: 60px;
-            height: 60px;
+        
+        .hero {
+            background: url('1.png') center/cover;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
         }
-        .pricing-card {
-            transition: transform 0.3s;
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
         }
-        .pricing-card:hover {
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
             transform: translateY(-10px);
+        }
+        
+        .gradient-text {
+            background-image: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 20px;
+        }
+        
+        .pricing-card {
+            background: rgba(255,255,255,0.03);
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            background: rgba(255,255,255,0.05);
+        }
+        
+        .btn-glow {
+            background: var(--gradient);
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-glow::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: glow 3s infinite;
+        }
+        
+        @keyframes glow {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
         }
     </style>
 </head>
-<body>
+<body class="bg-black text-white">
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top bg-black">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="1.png" alt="NetStream Logo" height="40">
+            <span class="h3 gradient-text fw-bold">NETSTREAM</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars text-white"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-                <li class="nav-item"><a class="nav-link" href="#download">Download</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="#features">Features</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="#pricing">Pricing</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="#download">Download</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 <!-- Hero Section -->
-<section class="hero-section d-flex align-items-center text-center text-white">
-    <div class="container">
-        <h1 class="display-4 fw-bold mb-4">Your Ultimate Streaming Experience</h1>
-        <p class="lead mb-4">40,000+ Movies & TV Shows • 86 Language Subtitles • Global Content</p>
-        <a href="#download" class="btn btn-success btn-lg px-5">Download Now</a>
+<section class="hero d-flex align-items-center">
+    <div class="container position-relative z-index-1 text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="display-2 fw-bold mb-4 gradient-text">Unlimited Entertainment</h1>
+                <p class="lead mb-5">Stream 40,000+ Movies & TV Shows in 4K Quality</p>
+                <a href="#download" class="btn btn-glow btn-lg px-5 py-3 rounded-pill">Start Free Trial</a>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- Features Section -->
+<!-- Features Grid -->
 <section id="features" class="py-5">
     <div class="container">
-        <h2 class="text-center mb-5">Why Choose NetStream?</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5>🎬 Extensive Library</h5>
-                        <p>Popular, top-rated, and latest movies/TV shows from around the world</p>
+        <div class="row g-5">
+            <!-- Feature Items -->
+            <div class="col-md-6 col-lg-4">
+                <div class="glass-card p-4 hover-scale">
+                    <div class="feature-icon d-flex align-items-center justify-content-center mb-4">
+                        <i class="fas fa-globe fa-2x"></i>
                     </div>
+                    <h4>Global Content Library</h4>
+                    <p class="text-muted">Movies & shows from 187 countries with multi-language support</p>
                 </div>
             </div>
-            <!-- Add more feature cards -->
+            <!-- Add more features -->
         </div>
     </div>
 </section>
 
 <!-- Pricing Section -->
-<section id="pricing" class="py-5 bg-dark">
+<section id="pricing" class="py-5">
     <div class="container">
-        <h2 class="text-center mb-5 text-white">Subscription Plans</h2>
+        <h2 class="text-center mb-5">Premium Plans</h2>
         <div class="row g-4">
             <div class="col-lg-4">
-                <div class="card pricing-card bg-black text-white">
-                    <div class="card-body">
-                        <h5>90 Days Trial</h5>
-                        <h2>FREE</h2>
-                        <p>Perfect for new users</p>
-                        <button class="btn btn-outline-light">Get Trial</button>
+                <div class="pricing-card p-4 rounded-4 hover-scale">
+                    <h5 class="gradient-text">90 Days Trial</h5>
+                    <div class="my-4">
+                        <span class="h1">FREE</span>
                     </div>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Full Feature Access</li>
+                        <li class="mb-3"><i class="fas fa-check text-success me-2"></i>HD Streaming</li>
+                    </ul>
+                    <button class="btn btn-outline-light w-100">Get Started</button>
                 </div>
             </div>
             <!-- Add more pricing cards -->
@@ -114,49 +177,42 @@
     </div>
 </section>
 
-<!-- Download Section -->
-<section id="download" class="py-5 text-center">
-    <div class="container">
-        <h2 class="mb-4">Start Streaming Today</h2>
-        <a href="https://github.com/xDreamms/NetStream/releases/download/1.0.0.4/NetStream.msi" 
-           class="btn btn-success btn-lg px-5 mb-3">
-            Download NetStream
-        </a>
-        <p class="text-muted">Windows 10/11 • Version 1.0.0.4</p>
+<!-- CTA Section -->
+<section class="py-5 bg-dark">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Stream?</h2>
+        <p class="lead mb-5">Download Now and Get 90 Days Free Trial</p>
+        <a href="#download" class="btn btn-glow btn-lg px-5">Download App</a>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-black text-white py-4">
-    <div class="container text-center">
-        <p>&copy; 2023 NetStream. All rights reserved.</p>
-        <a href="https://youtu.be/LenFUpJPwSc" class="text-white me-3">Watch Demo</a>
-        <a href="#privacy" class="text-white me-3">Privacy Policy</a>
+<footer class="bg-black py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <h4 class="gradient-text">NETSTREAM</h4>
+                <p class="text-muted">Your Gateway to Global Entertainment</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#features" class="text-white text-decoration-none">Features</a></li>
+                    <li><a href="#pricing" class="text-white text-decoration-none">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Social</h5>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-white"><i class="fab fa-youtube fa-lg"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
 
-<!-- Schema.org Structured Data -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "NetStream",
-    "operatingSystem": "Windows",
-    "applicationCategory": "Multimedia",
-    "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "1500"
-    },
-    "offers": {
-        "@type": "AggregateOffer",
-        "lowPrice": "4.99",
-        "priceCurrency": "USD"
-    }
-}
-</script>
-
-<!-- Bootstrap JS -->
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
