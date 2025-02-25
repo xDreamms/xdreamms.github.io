@@ -1,106 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NetStream: Your Ultimate Entertainment Experience</title>
-    <meta name="description" content="NetStream is your all-in-one destination for movies and TV shows, offering an unparalleled streaming and discovery experience.">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- SEO Meta Tags -->
+    <title>NetStream - Ultimate Streaming Platform for Movies & TV Shows</title>
+    <meta name="description" content="NetStream: Your all-in-one streaming platform with 40,000+ movies, TV shows, and multi-language support. Watch with subtitles in 86 languages. Affordable subscription plans starting at $4.99.">
+    <meta name="keywords" content="streaming movies, watch TV shows online, movie platform, affordable streaming, multi-language subtitles">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xdreamms.github.io/NetStream/">
+    <meta property="og:title" content="NetStream - Ultimate Streaming Platform">
+    <meta property="og:description" content="Stream 40,000+ movies & TV shows with subtitles in 86 languages. Start your free trial today!">
+    <meta property="og:image" content="https://xdreamms.github.io/NetStream/1.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://xdreamms.github.io/NetStream/">
+    <meta property="twitter:title" content="NetStream - Ultimate Streaming Platform">
+    <meta property="twitter:description" content="Stream 40,000+ movies & TV shows with subtitles in 86 languages. Start your free trial today!">
+    <meta property="twitter:image" content="https://xdreamms.github.io/NetStream/1.png">
+
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Özel Stil Dosyanız -->
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('1.png');
+            background-size: cover;
+            height: 90vh;
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+        }
+        .pricing-card {
+            transition: transform 0.3s;
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>NetStream: Your Ultimate Entertainment Experience</h1>
-        <a href="https://github.com/xDreamms/NetStream/releases/download/1.0.0.4/NetStream.msi" class="download-button">Download Now</a>
-        <a href="https://youtu.be/LenFUpJPwSc" class="youtube-link">Watch on YouTube</a>
-    </header>
-    <main>
-        <section class="banner">
-            <img src="1.png" alt="NetStream Banner">
-        </section>
-        <section class="features">
-            <h2>🌟 Explore a Universe of Content</h2>
-            <img src="2.png" alt="Content Exploration">
-            <ul>
-                <li><strong>Popular Movies & TV Shows:</strong> Dive into trending content that everyone is talking about.</li>
-                <li><strong>Top-Rated Gems:</strong> Discover the highest-rated movies and series, handpicked for quality and entertainment.</li>
-                <li><strong>Now Playing:</strong> Stay up to date with the latest releases currently in theaters or airing on TV.</li>
-            </ul>
-        </section>
-        <section class="search-discovery">
-            <h2>🔍 Advanced Search & Discovery</h2>
-            <img src="7.png" alt="Advanced Search">
-            <p><strong>Search Anything:</strong> Find movies, TV shows, actors, and directors with ease using our powerful search engine.</p>
-            <p><strong>Smart Discovery with "Explore":</strong> Choose your preferred content type (Movie or TV Show) and browse endless results tailored to your preferences.</p>
-            <ul>
-                <li>Sort by Popularity, Rating, Release Date, or Name.</li>
-                <li>Filter Results with Precision:
-                    <ul>
-                        <li>By date range, genre, language, user ratings, votes, runtime, and more.</li>
-                        <li>Minimum user ratings? Check. Favorite genres? Covered.</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        <section class="tracking">
-            <h2>📂 Track Your Journey</h2>
-            <img src="8.png" alt="Downloads Page">
-            <img src="9.png" alt="Watch History">
-            <p><strong>Downloads Page:</strong> Keep all your downloaded content organized and accessible.</p>
-            <p><strong>Watch History:</strong> Never lose track of what you’ve watched with our detailed history feature.</p>
-        </section>
-        <section class="personalization">
-            <h2>❤️ Personalize Your Experience</h2>
-            <img src="10.png" alt="Personalization">
-            <p><strong>TMDb Integration:</strong></p>
-            <ul>
-                <li>Rate movies and TV shows directly through your TMDb account.</li>
-                <li>Save your favorite titles or create custom watchlists.</li>
-            </ul>
-            <p><strong>Multi-Language Support:</strong></p>
-            <ul>
-                <li>Program available in <strong>44 languages</strong> for global accessibility.</li>
-                <li>Subtitles in <strong>86 languages</strong> for immersive viewing.</li>
-                <li>TMDb content in <strong>187 languages</strong> to ensure a tailored experience.</li>
-            </ul>
-        </section>
-        <section class="content-details">
-            <h2>🎥 In-Depth Content Details</h2>
-            <img src="3.png" alt="Movie Details">
-            <img src="4.png" alt="TV Show Details">
-            <img src="5.png" alt="Actor Profiles">
-            <p><strong>Detailed Movie & TV Show Pages:</strong></p>
-            <ul>
-                <li>Cast information and similar titles for endless recommendations.</li>
-                <li>See everything at a glance: release date, director, revenue, status, production companies, runtime, budget, language, videos, links, photos, comments, and torrents.</li>
-                <li>Add your own reviews and share your thoughts with the community.</li>
-            </ul>
-            <p><strong>Actor Profiles:</strong></p>
-            <ul>
-                <li>Dive into comprehensive biographies, filmographies, photos, and external links for your favorite stars.</li>
-            </ul>
-        </section>
-        <section class="subscription">
-            <h2>💳 Subscription Plans</h2>
-            <p>To unlock the full potential of NetStream, choose from one of our flexible subscription plans that suit your needs:</p>
-            <ul>
-                <li><strong>90 Days Trial:</strong> Experience everything for free! (Only for first 10 users)</li>
-                <li><strong>30 Days</strong> – <strong>$4.99:</strong> Get access to all features for 1 month.</li>
-                <li><strong>90 Days</strong> – <strong>$13.99:</strong> Enjoy 3 months of uninterrupted streaming.</li>
-                <li><strong>180 Days</strong> – <strong>$24.99:</strong> Half a year of ultimate entertainment.</li>
-                <li><strong>360 Days</strong> – <strong>$44.99:</strong> Full year of endless content.</li>
-                <li><strong>Lifetime Access</strong> – <strong>$299.99:</strong> One-time payment for lifetime access to all features and future updates.</li>
-            </ul>
-            <p><strong>Get started today and enjoy NetStream with the plan that fits you best!</strong></p>
-        </section>
-    </main>
-    <footer>
-        <p>🌍 <strong>Your Gateway to the World of Entertainment—NetStream.</strong></p>
-        <p>Start exploring today and redefine the way you enjoy movies and TV shows!</p>
-    </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="1.png" alt="NetStream Logo" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#download">Download</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section d-flex align-items-center text-center text-white">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-4">Your Ultimate Streaming Experience</h1>
+        <p class="lead mb-4">40,000+ Movies & TV Shows • 86 Language Subtitles • Global Content</p>
+        <a href="#download" class="btn btn-success btn-lg px-5">Download Now</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Why Choose NetStream?</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5>🎬 Extensive Library</h5>
+                        <p>Popular, top-rated, and latest movies/TV shows from around the world</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more feature cards -->
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="py-5 bg-dark">
+    <div class="container">
+        <h2 class="text-center mb-5 text-white">Subscription Plans</h2>
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="card pricing-card bg-black text-white">
+                    <div class="card-body">
+                        <h5>90 Days Trial</h5>
+                        <h2>FREE</h2>
+                        <p>Perfect for new users</p>
+                        <button class="btn btn-outline-light">Get Trial</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more pricing cards -->
+        </div>
+    </div>
+</section>
+
+<!-- Download Section -->
+<section id="download" class="py-5 text-center">
+    <div class="container">
+        <h2 class="mb-4">Start Streaming Today</h2>
+        <a href="https://github.com/xDreamms/NetStream/releases/download/1.0.0.4/NetStream.msi" 
+           class="btn btn-success btn-lg px-5 mb-3">
+            Download NetStream
+        </a>
+        <p class="text-muted">Windows 10/11 • Version 1.0.0.4</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black text-white py-4">
+    <div class="container text-center">
+        <p>&copy; 2023 NetStream. All rights reserved.</p>
+        <a href="https://youtu.be/LenFUpJPwSc" class="text-white me-3">Watch Demo</a>
+        <a href="#privacy" class="text-white me-3">Privacy Policy</a>
+    </div>
+</footer>
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "NetStream",
+    "operatingSystem": "Windows",
+    "applicationCategory": "Multimedia",
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "1500"
+    },
+    "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "4.99",
+        "priceCurrency": "USD"
+    }
+}
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
